@@ -15,24 +15,27 @@ void initializeBoard()
     }
 }
 
-void printBoard() {
+void printBoard() 
+{
     printf("\nTic-Tac-Toe Board:\n");
     for (int i = 0; i < 3; i++) 
     {
         for (int j = 0; j < 3; j++) 
         {
             printf(" %c ", board[i][j]);
-            if (j < 2) printf("|");
+            if (j < 2) 
+                printf("|");
         }
         printf("\n");
-        if (i < 2) printf("---|---|---\n");
+        if (i < 2) 
+            printf("---|---|---\n");
     }
 }
 
-int checkWin() {
+int checkWin() 
+{
     for (int i = 0; i < 3; i++) 
     {
-
         if (board[i][0] == board[i][1] && board[i][1] == board[i][2] && board[i][0] != ' ') 
         {
             return 1;
@@ -48,10 +51,12 @@ int checkWin() {
     {
         return 1;
     }
+
     if (board[0][2] == board[1][1] && board[1][1] == board[2][0] && board[0][2] != ' ') 
     {
         return 1;
     }
+
     return 0;
 }
 
@@ -63,14 +68,15 @@ int checkDraw()
         {
             if (board[i][j] == ' ') 
             {
-                return 0; 
+                return 0;
             }
         }
     }
-    return 1; 
+    return 1;
 }
 
-void switchPlayer() {
+void switchPlayer() 
+{
     if (currentPlayer == 'X') 
     {
         currentPlayer = 'O';
@@ -81,7 +87,8 @@ void switchPlayer() {
     }
 }
 
-void playGame() {
+void playGame() 
+{
     int row, col;
     int validInput;
     int gameRunning = 1;
@@ -100,7 +107,7 @@ void playGame() {
             if (scanf("%d %d", &row, &col) != 2) 
             {
                 printf("Invalid input! Please enter two numbers (1-3).\n");
-                while(getchar() != '\n'); 
+                while(getchar() != '\n');
             } 
             else 
             {
@@ -124,8 +131,10 @@ void playGame() {
         {
             printBoard();
             printf("\nPlayer %c wins!\n", currentPlayer);
-            if (currentPlayer == 'X') player1Wins++;
-            else player2Wins++;
+            if (currentPlayer == 'X') 
+                player1Wins++;
+            else 
+                player2Wins++;
             gameRunning = 0;
         } 
         else if (checkDraw()) 
@@ -142,14 +151,16 @@ void playGame() {
     }
 }
 
-void showStats() {
+void showStats() 
+{
     printf("\nGame Stats:\n");
     printf("Player X Wins: %d\n", player1Wins);
     printf("Player O Wins: %d\n", player2Wins);
     printf("Draws: %d\n", draws);
 }
 
-int main() {
+int main() 
+{
     int choice;
     
     while (1) 
@@ -165,7 +176,8 @@ int main() {
             printf("Invalid input! Please enter a number.\n");
             while(getchar() != '\n');
         } 
-        else {
+        else 
+        {
             if (choice == 1) 
             {
                 playGame();
