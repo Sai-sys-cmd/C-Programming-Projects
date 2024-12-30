@@ -1,7 +1,7 @@
-Projects Overview: 
+# Projects Overview: 
 This repository contains 5 intermediate-level C projects, showcasing my 1-month progress as I learned the C programming language. All of these projects were developed with the help of some AI tools to guide me through the process.
 
-Projects:
+# Projects:
 1. Number Guessing Game (number_guessing_game.c)
 Time Spent: 3 days
 Description: A simple game where the player guesses a randomly generated number within a specified range. The game provides feedback on each guess to help the player.
@@ -27,6 +27,6 @@ Time Spent: 4 days
 Description: A to-do list app that allows users to add, remove, and mark tasks as complete. It saves tasks between sessions.
 Learning: I used a little AI help to work out how to store and manage tasks efficiently. It was my final project in the month, and I felt confident applying my C skills.
 
-About This Collection: 
+# About This Collection: 
 Total Time to Complete: 1 month
 Learning Journey: I started learning C programming with basic concepts and gradually tackled more complex projects. These projects represent my growth as a beginner in C, using both self-study and AI assistance for guidance.
